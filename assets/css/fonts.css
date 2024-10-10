@@ -1,0 +1,21 @@
+@font-face {
+  font-family:'garaje';
+  src: url(../fonts/garaje-bold.woff2)format('woff2');
+}
+
+@font-face {
+  font-family:'Satoshi';
+  src: url(../fonts/Satoshi-Variable.woff2)format('woff2');
+}
+
+@font-face {
+  font-family:'SCore';
+  src: url(../fonts/SCore-bold.woff2)format('woff2');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family:'SCore';
+  src: url(../fonts/SCore-regular.woff2)format('woff2');
+  font-weight: 400;
+}
