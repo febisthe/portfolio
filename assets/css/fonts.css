@@ -9,13 +9,13 @@
 }
 
 @font-face {
-  font-family:'SCore';
-  src: url(../fonts/SCore-bold.woff2)format('woff2');
+  font-family:'Pre';
+  src: url(../fonts/Pretendard-SemiBold.woff2)format('woff2');
   font-weight: 600;
 }
 
 @font-face {
-  font-family:'SCore';
-  src: url(../fonts/SCore-regular.woff2)format('woff2');
+  font-family:'Pre';
+  src: url(../fonts/Pretendard-Regular.woff2)format('woff2');
   font-weight: 400;
 }
