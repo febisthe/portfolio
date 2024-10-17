@@ -1,6 +1,6 @@
 /* [섹션1] about */
-.sc-introduce { background: var(--black-); color: var(--white-); } 
-.sc-introduce .inner { padding-top: 150px; padding-bottom: 150px; } 
+.sc-introduce { background: var(--black-); color: var(--white-); height: 700vh; } 
+.sc-introduce .inner { position: sticky; top: 0; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; height: 100vh; } 
 .sc-introduce .headline { font-family: var(--font-small); color: var(--red-); font-size: 1.6rem; text-transform: uppercase; } 
 .sc-introduce .text { font-size: 3rem; letter-spacing: -0.02rem; line-height: 1.3; text-align: justify; } 
 

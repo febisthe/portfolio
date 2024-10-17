@@ -12,16 +12,23 @@ updateClock();
 setInterval(updateClock, 1000);
 
 // [섹션1] introduce
-const introduce = gsap.timeline({});
+const introduce = gsap.timeline({
+  scrollTrigger:{
+    trigger:'.sc-introduce',
+    start: '0% 0%',
+    end: '100% 100%',
+    scrub: 3,
+  }
+});
 
-introduce.from('.sc-introduce .headline', {autoAlpha:1});
-introduce.from('.sc-introduce .text span:nth-child(1)', {autoAlpha:0, duration: 1,});
-introduce.from('.sc-introduce .text span:nth-child(2)', {autoAlpha:0, duration: 1,});
-introduce.from('.sc-introduce .text span:nth-child(3)', {autoAlpha:0, duration: 1,});
-introduce.from('.sc-introduce .text span:nth-child(4)', {autoAlpha:0, duration: 1,});
-introduce.from('.sc-introduce .text span:nth-child(5)', {autoAlpha:0, duration: 1,});
-introduce.from('.sc-introduce .text span:nth-child(6)', {autoAlpha:0, duration: 1,});
-introduce.from('.sc-introduce .text span:nth-child(7)', {autoAlpha:0, duration: 1,});
+introduce.from('.sc-introduce .headline', {autoAlpha:0});
+introduce.from('.sc-introduce .text span:nth-child(1)', {autoAlpha:0});
+introduce.from('.sc-introduce .text span:nth-child(2)', {autoAlpha:0});
+introduce.from('.sc-introduce .text span:nth-child(3)', {autoAlpha:0});
+introduce.from('.sc-introduce .text span:nth-child(4)', {autoAlpha:0});
+introduce.from('.sc-introduce .text span:nth-child(5)', {autoAlpha:0});
+introduce.from('.sc-introduce .text span:nth-child(6)', {autoAlpha:0});
+introduce.from('.sc-introduce .text span:nth-child(7)', {autoAlpha:0});
 
 
 // [섹션2] 프로젝트
