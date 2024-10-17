@@ -26,7 +26,7 @@
 /* [섹션3] 질문 */
 .sc-qna { background: var(--white-); } 
 .sc-qna .inner { padding-top: 200px; padding-bottom: 200px; } 
-.sc-qna .headline { font-size: 5vw; line-height: 0.8; letter-spacing: -0.03em; font-family: var(--font-en); text-transform: uppercase; } 
+.sc-qna .headline { font-size: 5vw; line-height: 0.8; letter-spacing: -0.03em; font-family: var(--font-en); text-transform: uppercase; margin-bottom: 30px;} 
 .sc-qna .flex1 { display: flex; align-items: center; justify-content: space-between; margin-top: 60px; } 
 .sc-qna .flex1 .col-left { flex: 3; } 
 .sc-qna .flex1 .col-right { flex: 7; } 
@@ -74,7 +74,8 @@
  .sc-introduce .text { font-size: 1.5rem; } 
  .sc-project ul { grid-template-columns: repeat(1, 1fr); } 
  .sc-qna .col-right li .ques .num { font-size: 0.8rem; } 
- .sc-qna .col-right li .ques .tit { font-size: 1.2rem; } 
+ .sc-qna .col-right li .ques .tit { font-size: 1.2rem; }
+ .sc-qna .answer .inner2 .text { font-size: 1rem;} 
  }
 
 @media (max-width: 480px){
@@ -87,7 +88,9 @@
  .sc-qna .headline { font-size: 1.5rem; text-transform: uppercase; } 
  .sc-qna .col-right li .ques .num { display: none; } 
  .sc-qna .col-right li .ques .tit { font-size: 0.9rem; white-space: wrap; } 
- .sc-qna .col-right li .ques .ico-open { display: none; } 
+ .sc-qna .col-right li .ques .ico-open { display: none; }
+ .sc-qna .answer .inner2 .text { font-size: 0.7rem; padding-top: 10px; padding-right: 10px; flex:10;} 
+ .sc-qna .answer .inner2 .blank { display: none;} 
  .sc-contact .info .t3 { font-size: 1rem; } 
  .sc-contact .info .t4 { font-size: 0.8rem; } 
  .sc-contact .link-email .t5 { padding: 0.7rem 1rem; font-size: 0.7rem; } 
