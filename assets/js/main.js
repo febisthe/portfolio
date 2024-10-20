@@ -1,125 +1,72 @@
-// [헤더] click
-function updateClock() {
-  const now = new Date();
-  const hour = now.getHours();
-  const min = now.getMinutes();
+// nav
+const gnbTl = gsap.timeline({
+  paused: true,
+})
+gnbTl
+.to('#header .gnb', 0.4, {xPercent:-100})
+.from('#header .gnb ul > *', {opacity:0, yPercent:100, stagger: 0.03})
 
-  $('.module .hours').text(hour);
-  $('.module .minutes').text(min);
-}
+$('#header .btn-menu').click(function(){
+  if($(this).hasClass('on')){
+    gnbTl.reverse()
+  }else{
+    gnbTl.play()
+  }
+  $(this).toggleClass('on')
+})
 
-updateClock();
-setInterval(updateClock, 1000);
 
-// [섹션1] introduce
-const introduce = gsap.timeline({
-  scrollTrigger:{
-    trigger:'.sc-introduce',
+// line
+const lineTl = gsap.timeline({
+  scrollTrigger: {
+    trigger: '#work',
+    start: '0% 80%',
+    end: '100% 100%',
+    onEnter: () => lineTl.play(), 
+    onLeaveBack: () => lineTl.reverse(), 
+  }
+});
+
+lineTl.from('#work .line', {
+  opacity: 0,
+  "width": 0,
+  stagger: 1,
+});
+
+
+// project
+const workTl = gsap.timeline({
+  scrollTrigger: {
+    trigger: '#work',
     start: '0% 0%',
     end: '100% 100%',
-    scrub: 3,
+    onEnter: () => workTl.play(), 
+    onLeaveBack: () => {workTl.reverse();},
   }
 });
-
-introduce.from('.sc-introduce .headline', {autoAlpha:0});
-introduce.from('.sc-introduce .text span:nth-child(1)', {autoAlpha:0});
-introduce.from('.sc-introduce .text span:nth-child(2)', {autoAlpha:0});
-introduce.from('.sc-introduce .text span:nth-child(3)', {autoAlpha:0});
-introduce.from('.sc-introduce .text span:nth-child(4)', {autoAlpha:0});
-introduce.from('.sc-introduce .text span:nth-child(5)', {autoAlpha:0});
-introduce.from('.sc-introduce .text span:nth-child(6)', {autoAlpha:0});
-introduce.from('.sc-introduce .text span:nth-child(7)', {autoAlpha:0});
+workTl.from('#work ul li', {
+  opacity: 0,
+  y: 70, 
+  duration: 0.7,
+  stagger: 0.3
+})
 
 
-// [섹션2] 프로젝트
-$('.sc-project .control .btn-view').click(function () {
-  if ($('.sc-project ul').hasClass('active')) {
-    $(this).text('VIEW 1x2');
-  } else {
-    $(this).text('VIEW 1x3');
-  }
-  $('.sc-project ul').toggleClass('active');
-});
-
-// [섹션3] 큐앤에이
-$('.sc-qna .col-right li').click(function () {
-  $(this).toggleClass('active');
-});
-
-// [푸터] copy
-footCopy = gsap.timeline({
+// planet
+const planetTl = gsap.timeline({
   scrollTrigger: {
     trigger: '#footer',
-    start: '0% 80%',
-    toggleActions: 'play none play reverse',
-  },
-});
-footCopy.to(
-  '#footer .copy span:nth-child(2)',
-  {
-    y: 40,
-  },
-  'a'
-);
-footCopy.to(
-  '#footer .copy span:nth-child(3)',
-  {
-    y: 80,
-  },
-  'a'
-);
-
-// [반응형] footer-copy
-gsap.matchMedia().add('(max-width: 1024px)', () => {
-  const footCopy = gsap.timeline({
-    scrollTrigger: {
-      trigger: '#footer',
-      start: '0% 80%',
-      toggleActions: 'play none play reverse',
-    },
-  });
-  footCopy.to(
-    '#footer .copy span:nth-child(2)',
-    {
-      y: 20,
-    },
-    'a'
-  );
-  footCopy.to(
-    '#footer .copy span:nth-child(3)',
-    {
-      y: 40,
-    },
-    'a'
-  );
+    start: '0% 0%',
+    end: '100% 100%',
+  }
 });
 
-gsap.matchMedia().add('(max-width: 768px)', () => {
-  const footCopy = gsap.timeline({
-    scrollTrigger: {
-      trigger: '#footer',
-      start: '0% 80%',
-      toggleActions: 'play none play reverse',
-    },
-  });
-  footCopy.to(
-    '#footer .copy span:nth-child(2)',
-    {
-      y: 10,
-    },
-    'a'
-  );
-  footCopy.to(
-    '#footer .copy span:nth-child(3)',
-    {
-      y: 20,
-    },
-    'a'
-  );
+planetTl.to('.planet', {
+  width: 0,
+  rotation: 360,
+  ease: 'sine.inOut',
+  duration: 5, 
+  repeat: 5,
+  yoyo: true 
 });
 
-// [반응형] 서브메뉴
-$('#header .btn-box').click(function () {
-  $(this).toggleClass('on');
-  $('.head-inner2 .sub nav').toggleClass('active');
-});
