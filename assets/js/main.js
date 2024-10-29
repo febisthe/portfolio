@@ -1,72 +1,98 @@
-// nav
-const gnbTl = gsap.timeline({
-  paused: true,
-})
-gnbTl
-.to('#header .gnb', 0.4, {xPercent:-100})
-.from('#header .gnb ul > *', {opacity:0, yPercent:100, stagger: 0.03})
+// [헤더] click
+function updateClock(){
+  const now = new Date();
+  const hour = now.getHours();
+  const min = now.getMinutes();
 
-$('#header .btn-menu').click(function(){
-  if($(this).hasClass('on')){
-    gnbTl.reverse()
+  $('.module .hours').text(hour);
+  $('.module .minutes').text(min);
+}
+
+updateClock();
+setInterval(updateClock, 1000);
+
+// [헤더] 스크롤 이벤트
+let lastScroll = 0;
+$(window).scroll(function(){
+  curr = $(this).scrollTop();
+  headerHeight = $('#header').outerHeight();
+  
+  if(curr > headerHeight && curr > lastScroll){
+    $('#header').addClass('active');
   }else{
-    gnbTl.play()
+    $('#header').removeClass('active');
   }
-  $(this).toggleClass('on')
+
+  lastScroll = curr;
+})
+
+// [섹션3] 프로젝트
+$('.sc-project .control .btn-view').click(function(){
+  if($('.sc-project ul').hasClass('active')) {
+    $(this).text('VIEW 1x2')
+  } else {
+    $(this).text('VIEW 1x3')
+  }
+  $('.sc-project ul').toggleClass('active') 
+})
+
+// [섹션4] 큐앤에이
+$('.sc-qna .col-right li').click(function(){
+  $(this).toggleClass('active');
 })
 
 
-// line
-const lineTl = gsap.timeline({
-  scrollTrigger: {
-    trigger: '#work',
-    start: '0% 80%',
-    end: '100% 100%',
-    onEnter: () => lineTl.play(), 
-    onLeaveBack: () => lineTl.reverse(), 
+// [푸터] copy
+footCopy = gsap.timeline({
+  scrollTrigger:{
+    trigger:'#footer',
+    start:'0% 80%',
+    toggleActions: "play none play reverse"
   }
-});
-
-lineTl.from('#work .line', {
-  opacity: 0,
-  "width": 0,
-  stagger: 1,
-});
-
-
-// project
-const workTl = gsap.timeline({
-  scrollTrigger: {
-    trigger: '#work',
-    start: '0% 0%',
-    end: '100% 100%',
-    onEnter: () => workTl.play(), 
-    onLeaveBack: () => {workTl.reverse();},
-  }
-});
-workTl.from('#work ul li', {
-  opacity: 0,
-  y: 70, 
-  duration: 0.7,
-  stagger: 0.3
 })
+footCopy.to('#footer .copy span:nth-child(2)',{
+  y: 40
+}, 'a')
+footCopy.to('#footer .copy span:nth-child(3)',{
+  y: 80
+}, 'a')
 
-
-// planet
-const planetTl = gsap.timeline({
-  scrollTrigger: {
-    trigger: '#footer',
-    start: '0% 0%',
-    end: '100% 100%',
-  }
+// [반응형] footer-copy
+gsap.matchMedia().add("(max-width: 1024px)", () => {
+  const footCopy = gsap.timeline({
+    scrollTrigger: {
+      trigger: '#footer',
+      start: '0% 80%',
+      toggleActions: "play none play reverse"
+    }
+  });
+  footCopy.to('#footer .copy span:nth-child(2)', {
+    y: 20
+  }, 'a');
+  footCopy.to('#footer .copy span:nth-child(3)', {
+    y: 40
+  }, 'a');
 });
 
-planetTl.to('.planet', {
-  width: 0,
-  rotation: 360,
-  ease: 'sine.inOut',
-  duration: 5, 
-  repeat: 5,
-  yoyo: true 
+gsap.matchMedia().add("(max-width: 768px)", () => {
+  const footCopy = gsap.timeline({
+    scrollTrigger: {
+      trigger: '#footer',
+      start: '0% 80%',
+      toggleActions: "play none play reverse"
+    }
+  });
+  footCopy.to('#footer .copy span:nth-child(2)', {
+    y: 10
+  }, 'a');
+  footCopy.to('#footer .copy span:nth-child(3)', {
+    y: 20
+  }, 'a');
 });
 
+
+// [반응형] 서브메뉴
+$('#header .btn-box').click(function(){
+  $(this).toggleClass('on');
+  $('.head-inner2 .sub nav').toggleClass('active')
+})

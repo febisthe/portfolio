@@ -1,0 +1,9 @@
+.blind { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); margin: -1px; }
+.inner { padding: 0 60px; } 
+
+
+/* [반응형] */
+
+@media all and (max-width:1024px){
+  .inner { padding: 0 40px; } 
+}
