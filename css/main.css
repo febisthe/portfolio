@@ -1,0 +1,24 @@
+.sc-works .headline { width: 100%; height: 100vh; font-size: 120px; display: flex; align-items: center; justify-content: center; } 
+
+.sc-works .list-work { width: 80%; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; padding-bottom: 300px; } 
+
+.sc-works .list-work .work-item { width: 45%; margin-top: 200px; } 
+
+.sc-works .work-item:nth-child(2n) { margin-top: 0; } 
+
+.sc-works .work-item a { position: relative; display: block; } 
+
+.sc-works .work-item a:hover .thumb::before { opacity: 1; } 
+
+.sc-works .work-item .thumb { position: relative; height: 400px; } 
+
+.sc-works .work-item .thumb::before { content: attr(data-device); position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 30px; transition: 0.3s; opacity: 0; background:rgba(0, 0, 0, 0.4); width: 100%; height: 100%; } 
+
+.sc-works .work-item .thumb img { width: 100%; height: 100%; object-fit: cover; } 
+
+.sc-works .work-item .text strong { display: block; font-size: 30px; font-weight: bold; margin: 20px 0 10px; } 
+
+.sc-works .work-item .text { display: flex; align-items: center; justify-content: space-between; } 
+
+.sc-works .work-item .text .skill { font-family: Arial, Helvetica, sans-serif; font-size: 12px; border-radius: 50px; border: 1px solid #6e6e6e; padding: 5px 10px; color: #6e6e6e; } 
+
