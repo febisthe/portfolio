@@ -3,6 +3,8 @@
 
 @font-face { font-family: 'Greyst'; src: url("../font/Greyst-Regular.woff") format("woff"); font-weight: 400; } 
 @font-face { font-family: 'Gilroy'; src: url("../font/Gilroy-Light.woff") format("woff"); font-weight: 300; } 
+@font-face { font-family: 'Pre'; src: url("../font/PretendardVariable.woff2") format("woff2");} 
+
 
 .inner { width: 80%; margin: 0 auto; } 
 
