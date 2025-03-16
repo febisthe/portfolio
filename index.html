@@ -1,167 +1,342 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PORTFOLIO</title>
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/main.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>신자영 포트폴리오 2025</title>
+
+  <!-- favicon -->
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon.png">
+
+  <!-- css -->
+  <link rel="stylesheet" href="./assets/css/styles.css">
+
+  <!-- js -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="./assets/js/main.js" defer></script>
 </head>
 <body>
-    <div class="loading-page">
-        <strong>
-            <span class="txt01">This is</span>
-            <span class="txt02">the work</span>
-            <span class="txt03">I created</span>
-            <span class="txt04">2025 portfolio</span>
-        </strong>
-    </div>
-    <header>    
-        <div class="top-area">
-            <h1 class="logo"><a href="">Jyoung</a></h1>
-            <a class="email" href="mailto:febisthe@naver.com">Contact</a>
-        </div>
-    </header>
-    <main>
-        <section class="sc-works">
-            <div class="headline">
-                <h2>My Works</h2>
-            </div>
-            <ul class="list-work">
-                <li class="work-item">
-                    <a href="https://febisthe.github.io/ranee/" target="_blank">
-                        <div class="thumb" data-device="pc">
-                            <img src="./image/ranee.jpg" alt="리니서울 사이트 이미지">
-                        </div>
-                        <div class="text">
-                            <strong>Ranee</strong>
-                            <div class="skill-box">
-                                <span class="skill">SASS</span>
-                                <span class="skill">GSAP</span>
-                                <span class="skill">SWIPER</span>
-                            </div>
-                            <a href="https://github.com/febisthe/ranee/blob/main/index.html" class="link-code" target="_blank">code review</a>
-                        </div>
-                    </a>
-                </li>
-                <li class="work-item">
-                    <a href="https://febisthe.github.io/genesis/" target="_blank">
-                        <div class="thumb" data-device="pc">
-                            <img src="./image/genesis.jpg" alt="제네시스 사이트 이미지">
-                        </div>
-                        <div class="text">
-                            <strong>Genesis</strong>
-                            <div class="skill-box">
-                                <span class="skill">SASS</span>
-                                <span class="skill">GSAP</span>
-                                <span class="skill">SWIPER</span>
-                            </div>
-                            <a href="https://github.com/febisthe/genesis/blob/main/index.html" class="link-code" target="_blank">code review</a>
-                        </div>
-                    </a>
-                </li>
-                <li class="work-item">
-                    <a href="https://febisthe.github.io/andar/" target="_blank">
-                        <div class="thumb" data-device="mobile">
-                            <img src="./image/andar.jpg" alt="안다르 사이트 이미지">
-                        </div>
-                        <div class="text">
-                            <strong>Andar</strong>
-                            <div class="skill-box">
-                                <span class="skill">JSON</span>
-                                <span class="skill">SCSS</span>
-                                <span class="skill">SWIPER</span>
-                            </div>
-                            <a href="https://github.com/febisthe/andar/blob/main/index.html" class="link-code" target="_blank">code review</a>
-                        </div>
-                    </a>
-                </li>
-                <li class="work-item">
-                    <a href="https://febisthe.github.io/enterprise/" target="_blank">
-                        <div class="thumb" data-device="pc">
-                            <img src="./image/enter.jpg" alt="엔터프라이즈 사이트 이미지">
-                        </div>
-                        <div class="text">
-                            <strong>Enterprise</strong>
-                            <div class="skill-box">
-                                <span class="skill">GSAP</span>
-                            </div>
-                            <a href="https://github.com/febisthe/enterprise/blob/main/index.html" class="link-code" target="_blank">code review</a>
-                        </div>
-                    </a>
-                </li>
-                <li class="work-item">
-                    <a href="https://febisthe.github.io/kakao/" target="_blank">
-                        <div class="thumb" data-device="pc">
-                            <img src="./image/kakao.jpg" alt="카카오뱅크 사이트 이미지">
-                        </div>
-                        <div class="text">
-                            <strong>Kakao bank</strong>
-                            <div class="skill-box">
-                                <span class="skill">GSAP</span>
-                            </div>
-                            <a href="https://github.com/febisthe/kakao/blob/main/index.html" class="link-code" target="_blank">code review</a>
-                        </div>
-                    </a>
-                </li>
-                <li class="work-item">
-                    <a href="https://febisthe.github.io/woowahan/" target="_blank">
-                        <div class="thumb" data-device="Responsive">
-                            <img src="./image/woowahan.jpg" alt="우아한 형제들 사이트 이미지">
-                        </div>
-                        <div class="text">
-                            <strong>Woowahan</strong>
-                            <div class="skill-box">
-                                <span class="skill">jQuery</span>
-                                <span class="skill">SWIPER</span>
-                            </div>
-                            <a href="https://github.com/febisthe/woowahan/blob/main/index.html" class="link-code" target="_blank">code review</a>
-                        </div>
-                    </a>
-                </li>
-                <li class="work-item">
-                    <a href="https://febisthe.github.io/careers/" target="_blank">
-                        <div class="thumb" data-device="Responsive">
-                            <img src="./image/naver.png" alt="네이버 커리어스 사이트 이미지">
-                        </div>
-                        <div class="text">
-                            <strong>Naver Careers</strong>
-                            <div class="skill-box">
-                                <span class="skill">jQuery</span>
-                                <span class="skill">SWIPER</span>
-                            </div>
-                            <a href="https://github.com/febisthe/careers/blob/main/index.html" class="link-code" target="_blank">code review</a>
-                        </div>
-                    </a>
-                </li>
-                <li class="work-item">
-                    <a href="https://febisthe.github.io/seoul/" target="_blank">
-                        <div class="thumb" data-device="PC">
-                            <img src="./image/seoul.jpg" alt="서울시청 사이트 이미지">
-                        </div>
-                        <div class="text">
-                            <strong>Seoul city</strong>
-                            <div class="skill-box">
-                                <span class="skill">jQuery</span>
-                                <span class="skill">SWIPER</span>
-                                <span class="skill">웹접근성</span>
-                            </div>
-                            <a href="https://github.com/febisthe/seoul/blob/main/index.html" class="link-code" target="_blank">code review</a>
-                        </div>
-                    </a>
-                </li>
+  <div class="wrapper">
+    <header id="header">
+      <div class="head-inner">
+        <h1 class="blind">신자영 포트폴리오 2024</h1>
+        <button class="btn-menu">
+          <div class="open">
+            <span class="blind">메뉴 열기</span>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+          <div class="close">
+            <span class="blind">메뉴 닫기</span>
+            <div class="line rotate"></div>
+            <div class="line"></div>
+          </div>
+        </button>
+        <nav class="gnb">
+          <div class="gnb-inner">
+            <ul>
+              <li><a href="#intro">Intro</a></li>
+              <li><a href="#work">Works</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="https://github.com/febisthe" target="_blank">Github</a></li>
             </ul>
-        </section>
-    </main>
-    <footer>    
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main id="main">
+      <section class="section1" id="intro">
+        <h2 class="headline">web publisher</h2>
+        <p class="txt">Hello, I’m Shin Ja-young. <br class="center"/> Nice to meet you!</p>
+        <p class="desc">
+          시맨틱 태그를 활용한 마크업으로 뼈대가 탄탄하고 명확한 웹구조를 지향합니다.
+          <br/>
+          UI의 다채로운 색감을 생각하고 UX로 사용자들에게 더 나은 방향을 제공하고 싶습니다. 
+          <br/>
+          트렌드에 발 맞추어 성장하고 스스로 역량을 키워나가는 사람이 되고자 합니다. 
+        </p>
+      </section>
+      <section class="section2" id="work">
+        <div class="line"></div>
         <div class="inner">
-            <p class="copyright">Copyright 2025. jy all rights reserved.</p>
+          <h2 class="headline-sm">프로젝트</h2>
+          <p class="desc">
+            목표를 이루기 위해
+            <br/>
+            그동안 열심히 공부해온 내용을 바탕으로 퍼블리싱한 <span class="df">작업물</span>입니다.
+            <br/>
+            시멘틱태그를 시작으로 웹 접근성 · CSS · jQuery · 인터랙티브함까지 차곡차곡 쌓았습니다.
+          <div class="cont">
+            <ul>
+              <li>
+                <strong class="tit">제네시스</strong>
+                <div class="thumb">
+                  <img src="./assets/images/img_genesis.jpg" alt="제네스 이미지">
+                  <div class="txt">
+                    <span class="b">기여도:100%</span>
+                    <span class="media">PC형</span>
+                    <span class="skill">#GSAP</span>
+                    <span class="skill">#JQUERY</span>
+                    <span class="skill">#SWIPER</span>
+                  </div>
+                </div>
+                <div class="info">
+                  <a href="https://febisthe.github.io/genesis/" target="_blank" class="site">사이트</a>
+                  <a href="https://velog.io/@febisthe/%EC%97%94%ED%84%B0%ED%94%84%EB%9D%BC%EC%9D%B4%EC%A6%88%EB%B8%94%EB%A1%9D%EC%B2%B4%EC%9D%B8" target="_blank" class="review">코드리뷰</a>
+                </div>
+              </li>
+              <li>
+                <strong class="tit">라니서울</strong>
+                <div class="thumb">
+                  <img src="./assets/images/img_ranee.jpg" alt="라니서울 이미지">
+                  <div class="txt">
+                    <span class="b">기여도:100%</span>
+                    <span class="media">PC형</span>
+                    <span>#GSAP</span>
+                    <span class="skill">#JQUERY</span>
+                    <span class="skill">#SWIPER</span>
+                  </div>
+                </div>
+                <div class="info">
+                  <a href="https://febisthe.github.io/ranee/" target="_blank" class="site">사이트</a>
+                  <a href="https://velog.io/@febisthe/%EB%9D%BC%EB%8B%88%EC%84%9C%EC%9A%B8" target="_blank" class="review">코드리뷰</a>
+                </div>
+              </li>
+              <li>
+                <strong class="tit">안다르</strong>
+                <div class="thumb">
+                  <img src="./assets/images/img_andar.jpg" alt="안다르 이미지">
+                  <div class="txt">
+                    <span class="b">기여도:100%</span>
+                    <span class="media">모바일형</span>
+                    <span class="skill">#JSON</span>
+                    <span class="skill">#SCSS</span>
+                    <span class="skill">#JQUERY</span>
+                    <span class="skill">#SWIPER</span>
+                  </div>
+                </div>
+                <div class="info">
+                  <a href="https://febisthe.github.io/andar/" target="_blank" class="site">사이트</a>
+                  <a href="https://velog.io/@febisthe/%EC%95%88%EB%8B%A4%EB%A5%B4" target="_blank" class="review">코드리뷰</a>
+                </div>
+              </li>
+              <li>
+                <strong class="tit">Naver Careers</strong>
+                <div class="thumb">
+                  <img src="./assets/images/img_naver.png" alt="네이버 커리어스 이미지">
+                  <div class="txt">
+                    <span class="b">기여도:100%</span>
+                    <span class="media">반응형</span>
+                    <span class="skill">#JQUERY</span>
+                    <span class="skill">#SWIPER</span>
+                  </div>
+                </div>
+                <div class="info">
+                  <a href="https://febisthe.github.io/careers/" target="_blank" class="site">사이트</a>
+                  <a href="https://velog.io/@febisthe/Naver-Careers" target="_blank" class="review">코드리뷰</a>
+                </div>
+              </li>
+              <li>
+                <strong class="tit">우아한 형제들</strong>
+                <div class="thumb">
+                  <img src="./assets/images/img_woowahan.jpg" alt="우아한 형제들 이미지">
+                  <div class="txt">
+                    <span class="b">기여도:100%</span>
+                    <span class="media">반응형</span>
+                    <span class="skill">#JQUERY</span>
+                    <span class="skill">#SWIPER</span>
+                  </div>
+                </div>
+                <div class="info">
+                  <a href="https://febisthe.github.io/woowahan/" target="_blank" class="site">사이트</a>
+                  <a href="https://velog.io/@febisthe/%EC%9A%B0%EC%95%84%ED%95%9C-%ED%98%95%EC%A0%9C%EB%93%A4" target="_blank" class="review">코드리뷰</a>
+                </div>
+              </li>
+              <li>
+                <strong class="tit">서울시청</strong>
+                <div class="thumb">
+                  <img src="./assets/images/img_seoul.jpg" alt="서울시청 이미지">
+                  <div class="txt">
+                    <span class="b">기여도:100%</span>
+                    <span class="media">PC형</span>
+                    <span>웹접근성</span>
+                    <span class="skill">#JQUERY</span>
+                    <span class="skill">#SWIPER</span>
+                  </div>
+                </div>
+                <div class="info">
+                  <a href="https://febisthe.github.io/seoul/" target="_blank" class="site">사이트</a>
+                  <a href="https://velog.io/@febisthe/%EC%84%9C%EC%9A%B8%EC%8B%9C%EC%B2%AD" target="_blank" class="review">코드리뷰</a>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
+      </section>
+      <section class="section3" id="about">
+        <div class="inner">
+          <h2 class="headline">About me</h2>
+          <p class="desc">
+            <span class="t1">저는 어떤 사람일까요?</span>
+            <br/>
+            16personalities! 무료 성격 검사를 통해 저의 성격과 강점을 소개하고자 합니다.
+            <br/>
+            <span class="t2">plz take it in a fun way! (•ᴗ-)✧</span>
+          </p>
+          <div class="graph">
+            <div class="trait">
+              <div class="bar"></div>
+              <div class="type">
+                <span>외향형</span>
+                <span>내향형</span>
+              </div>
+              <div class="result ie">
+                <div class="dot"></div>
+                <span>56% 내향형</span>
+              </div>
+            </div>
+            <div class="trait">
+              <div class="bar"></div>
+              <div class="type">
+                <span>직관형</span>
+                <span>관찰형</span>
+              </div>
+              <div class="result ns">
+                <div class="dot"></div>
+                <span>78% 직관형</span>
+              </div>
+            </div>
+            <div class="trait">
+              <div class="bar"></div>
+              <div class="type">
+                <span>사고형</span>
+                <span>감정형</span>
+              </div>
+              <div class="result ft">
+                <div class="dot"></div>
+                <span>51% 사고형</span>
+              </div>
+            </div>
+            <div class="trait">
+              <div class="bar"></div>
+              <div class="type">
+                <span>계획형</span>
+                <span>탐구형</span>
+              </div>
+              <div class="result pj">
+                <div class="dot"></div>
+                <span>100% 계획형</span>
+              </div>
+            </div>
+          </div>
+          <div class="clusion">
+            <div class="thumb">
+              <img src="./assets/images/img_clusion.png" alt="그래프 결론">
+            </div>
+            <div class="txt">
+              복잡한 문제를 <span class="df">직관적</span>으로 이해하고 해결책을 제시해 협력하는 것을 선호합니다.
+              <sapn class="df">꼼꼼함</sapn>은 세밀한 계획에 도움을 주고 목표 달성을 위해 끊임없이 
+              <span class="df">노력</span>합니다.
+              <span class="df">성장</span>에 대한 열망이 강합니다. 
+              <span class="df">꾸준히</span> 공부하며 최신 트렌드와 다양한 웹정보를 습득하며 항상 
+              <span class="df">더 나은</span> 저를 만들기 위해 노력합니다.
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section4" id="contact">
+        <div class="inner">
+          <h2 class="blind">contact</h2>
+          <div class="text">
+            Would you
+            <br />
+            <span class="t1">like</span>
+            <span class="t2">to</span>
+            <br />
+            <span class="df">work</span> with <span class="df">me</span>?
+          </div>
+          <div class="thumb">
+            <img src="./assets/images/img_profile.png" alt="프로필 사진" />
+          </div>
+          <div class="info">
+            <span class="t3">저에 대해 더 궁금한 점이 있으신가요?</span>
+            <span class="t4">아래 주소로 메일을 보내주세요!</span>
+            <a href="mailto:febisthe@daum.net" class="link-email">
+              <span class="t5">CONTACT ME →</span>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="section5">
+        <h2 class="blind">목표</h2>
+        <div class="marquee">
+          <ul>
+            <li>
+              <div class="item n1">
+                <span>책임감</span>
+                <span class="b">세심하고 꼼꼼한</span>
+                <span>감각</span>
+                <span>유연한</span>
+                <span>친화력이 좋은</span>
+                <span class="b">꾸준한 성장</span>
+                <span>소통</span>
+              </div>
+              <div class="item n1">
+                <span>책임감</span>
+                <span>세심하고 꼼꼼한</span>
+                <span>감각</span>
+                <span>유연한</span>
+                <span>친화력이 좋은</span>
+                <span>꾸준한 성장</span>
+                <span>집중</span>
+              </div>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <div class="item n2">
+                <span>HTML</span>
+                <span class="b">CSS</span>
+                <span>SCSS</span>
+                <span>jquery</span>
+                <span>JavaScript</span>
+                <span>React.js</span>
+                <span class="b">웹 접근성</span>
+                <span>Interaction</span>
+              </div>
+              <div class="item n2">
+                <span>HTML</span>
+                <span class="b">CSS</span>
+                <span>SCSS</span>
+                <span>jQuery</span>
+                <span>JavaScript</span>
+                <span>React.js</span>
+                <span class="b">웹 접근성</span>
+                <span>Interaction</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer id="footer">
+      <div class="foot-inner">
+        <img src="./assets/images/planet.png" alt="" class="planet">
+        <h2 class="headline">Shin ja young</h2>
+        <p class="desc">
+          티끌이 모여 태산을 이루듯 저의 <span class="b">작은 노력</span>들이 모여 오늘을 만들었습니다.
+          <br/>
+          지속적인 노력은 <span class="b">끊임없는 발전</span>과 경험을 만들고, 더 큰 목표를 향해 나가는<span class="b"> 원동력</span>이 될 것입니다.
+        </p>
+        <em class="copy">
+          © 2024. Jyoung All Rights Reserved.
+        </em>
+      </div>
     </footer>
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
-    <script src="./js/main.js"></script>
+  </div>
 </body>
 </html>
